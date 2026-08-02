@@ -1,32 +1,14 @@
-# React + TypeScript + Vite
+# DataLens
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Vos données disent-elles la vérité ?
+DataLens vérifie si un jeu de nombres semble naturel ou s'il porte les traces d'une fabrication, d'un arrondi ou d'une modification — en s'appuyant sur des méthodes statistiques reproductibles, sans aucune intelligence artificielle.
 
-Currently, two official plugins are available:
+## Outils
+- Vérifier un fichier (Importez un fichier Excel, CSV ou JSON et obtenez un diagnostic complet de sa colonne numérique.)
+- Tester une liste de nombres (Collez directement une série de nombres (montants, mesures, résultats...) sans fichier à importer.)
+- Comparer plusieurs sources (Confrontez plusieurs fichiers ou plusieurs colonnes d'un même fichier pour repérer les différences.)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Qu'est-ce que la loi de Benford ?
+Dans presque tous les jeux de nombres "naturels" — populations de villes, factures, résultats scientifiques — le premier chiffre n'est pas réparti au hasard. Il commence beaucoup plus souvent par 1 que par 9.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+C'est une régularité mathématique connue depuis 1938, utilisée par les auditeurs et les enquêteurs financiers. DataLens compare la répartition réelle de vos données à cette référence : un grand écart peut signaler des valeurs arrondies, inventées ou modifiées.
